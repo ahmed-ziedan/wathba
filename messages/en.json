@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "wathba": "WATHBA",
+    "packages": "Packages",
+    "why": "Why WATHBA",
+    "contact": "Contact",
+    "cta": "Start Your Project"
+  },
+  "hero": {
+    "badge": "✦ Digital presence for your business ",
+    "headline_1": "Your website is your",
+    "headline_2": "first impression.",
+    "sub": "We build professional websites in days — fixed price, no surprises.",
+    "cta_primary": "See Packages",
+    "cta_secondary": "Contact Us",
+    "proof_1": " Delivery within 4 days",
+    "proof_2": "Fixed price from day one",
+    "proof_3": "First year hosting free",
+    "proof_4": "Domain Included",
+    "proof_5": "SEO Optimized",
+    "proof_6": "Mobile Optimized"
+  },
+  "problem": {
+    "headline_1": "Why do most SMEs",
+    "headline_2": "lose customers online?",
+    "lead": "They have a business, they have social media — but when someone searches for them on Google, they don't show up.",
+    "pain_1": "An outdated site that pushes customers away",
+    "pain_2": "No website at all",
+    "pain_3": "Social media alone isn't enough",
+    "pain_4": "Bad experiences with agencies and unclear pricing"
+  },
+  "packages": {
+    "label": "Choose your package",
+    "headline_1": "3 packages.",
+    "headline_2": "Fixed price. No surprises.",
+    "sub": "Every package has a defined scope from day one — you know exactly what you get.",
+    "outside_egypt": "Outside Egypt?",
+    "hosting_note": "First year hosting included",
+    "cta": "Start Now",
+    "badge": "Most Popular",
+    "starter": {
+      "name": "Starter",
+      "price": "199",
+      "price_out": "299",
+      "delivery": "2–4 days",
+      "best_for": "Cafes, Restaurants, Salons",
+      "features": [
+        "Single-scroll landing page",
+        "Mobile responsive",
+        "WhatsApp CTA button",
+        "Google Maps",
+        "Contact form"
+      ]
+    },
+    "business": {
+      "name": "Business",
+      "price": "449",
+      "price_out": "600",
+      "delivery": "5–7 days",
+      "best_for": "Clinics, Offices, Consultancies",
+      "features": [
+        "3–5 page website",
+        "Basic SEO",
+        "Google Analytics",
+        "Contact form → Email",
+        "2 revision rounds"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "899",
+      "price_out": "1200",
+      "delivery": "12–15 days",
+      "best_for": "Shops, Stores, Online Sellers",
+      "features": [
+        "Full e-commerce store",
+        "Product catalog + cart",
+        "Stripe checkout",
+        "Admin dashboard",
+        "3 revision rounds"
+      ]
+    }
+  },
+  "how": {
+    "headline": "How does it work?",
+    "sub": "From choosing your package to going live — every step is clear.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Choose a Package",
+        "desc": "Pick what fits your business"
+      },
+      {
+        "n": "02",
+        "title": "Pay 50% & We Start",
+        "desc": "Work begins right after deposit"
+      },
+      {
+        "n": "03",
+        "title": "Preview & Revisions",
+        "desc": "You review, we adjust"
+      },
+      {
+        "n": "04",
+        "title": "Pay the Rest & Go Live",
+        "desc": "Final payment → your site is live"
+      }
+    ]
+  },
+  "why": {
+    "headline": "Why WATHBA?",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "Fixed price from day one",
+        "desc": "No hidden fees, no 'let's talk about price'"
+      },
+      {
+        "icon": "📅",
+        "title": "Clear delivery timeline",
+        "desc": "You know when your site goes live before you pay"
+      },
+      {
+        "icon": "🔒",
+        "title": "50% deposit only",
+        "desc": "Rest is paid after you see and approve"
+      },
+      {
+        "icon": "🏠",
+        "title": "First year hosting free",
+        "desc": "No extra costs to worry about"
+      },
+      {
+        "icon": "📱",
+        "title": "Mobile-first always",
+        "desc": "Every site looks perfect on any device"
+      },
+      {
+        "icon": "🎯",
+        "title": "Clear scope",
+        "desc": "You know exactly what you get — no more, no less"
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Ready to start?",
+    "sub": "Message us and we'll get back to you in under 24 hours.",
+    "name": "Your Name",
+    "business": "Business Name",
+    "whatsapp": "WhatsApp Number",
+    "package": "Interested Package",
+    "cta": "Send Request",
+    "or": "Or reach us directly",
+    "whatsapp_cta": "Message us on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Be found. Be chosen.",
+    "copyright": "© 2026 WATHBA.",
+    "rights": "All rights reserved."
+  }
+}
