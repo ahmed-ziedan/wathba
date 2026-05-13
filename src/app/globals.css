@@ -1,5 +1,5 @@
 /* ── English Fonts (Google) ── */
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -9,32 +9,36 @@
 
 /* ── Arabic Fonts (Local) ── */
 @font-face {
-  font-family: 'ThmanyahDisplay';
-  src: url('/fonts/thmanyahserifdisplay-Bold.woff2') format('woff2');
+  font-family: "ThmanyahDisplay";
+  src: url("/fonts/thmanyahserifdisplay-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'ThmanyahDisplay';
-  src: url('/fonts/thmanyahserifdisplay-Regular.woff2') format('woff2');
+  font-family: "ThmanyahDisplay";
+  src: url("/fonts/thmanyahserifdisplay-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'ThmanyahSans';
-  src: url('/fonts/thmanyahsans-Regular.woff2') format('woff2');
+  font-family: "ThmanyahSans";
+  src: url("/fonts/thmanyahsans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'ThmanyahSans';
-  src: url('/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-family: "ThmanyahSans";
+  src: url("/fonts/thmanyahsans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'ThmanyahSans';
-  src: url('/fonts/thmanyahsans-Bold.woff2') format('woff2');
+  font-family: "ThmanyahSans";
+  src: url("/fonts/thmanyahsans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -44,17 +48,17 @@
   /* Shadcn defaults */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: "JetBrains Mono", monospace;
   --font-heading: var(--font-sans);
 
   /* Dynamic font families — set via CSS vars on <html> per locale */
-  --font-display: var(--font-display, 'Syne'), 'Cairo', sans-serif;
-  --font-sans: var(--font-body, 'DM Sans'), 'Cairo', sans-serif;
-  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-display: var(--font-display, "Syne"), "Cairo", sans-serif;
+  --font-sans: var(--font-body, "DM Sans"), "Cairo", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
 
   /* Custom brand colors */
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8C97A;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
   --color-gold-glow: rgba(201, 168, 76, 0.12);
   --color-bg: #0a0a0a;
   --color-bg-card: #111111;
@@ -105,14 +109,17 @@
   --bg: #0a0a0a;
   --bg-card: #111111;
   --bg-card-2: #161616;
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
   --gold-glow: rgba(201, 168, 76, 0.12);
-  --white: #FFFFFF;
+  --white: #ffffff;
   --gray: #888888;
-  --gray-light: #CCCCCC;
+  --gray-light: #cccccc;
   --border-gold: rgba(201, 168, 76, 0.18);
   --border-subtle: rgba(255, 255, 255, 0.06);
+  --bg-primary: #08080d;
+  --text-secondary: #a09d96;
+  --text-muted: #5c5a56;
 
   /* Footer / surfaces */
   --bg-secondary: #0f0f18;
@@ -122,11 +129,11 @@
   --footer-text: rgba(240, 237, 230, 0.88);
 
   /* Font aliases for reference */
-  --font-display-en: 'Syne', sans-serif;
-  --font-body-en: 'DM Sans', sans-serif;
-  --font-display-ar: 'ThmanyahDisplay', sans-serif;
-  --font-body-ar: 'ThmanyahSans', sans-serif;
-  --font-mono-ref: 'JetBrains Mono', monospace;
+  --font-display-en: "Syne", sans-serif;
+  --font-body-en: "DM Sans", sans-serif;
+  --font-display-ar: "ThmanyahDisplay", sans-serif;
+  --font-body-ar: "ThmanyahSans", sans-serif;
+  --font-mono-ref: "JetBrains Mono", monospace;
 
   /* Shadcn defaults */
   --background: oklch(1 0 0);
@@ -201,9 +208,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
     scroll-behavior: smooth;
@@ -211,10 +220,16 @@
 }
 
 /* Hero — infinite proof ticker: two identical segments, zero gap, translate -50% = one segment */
+.num {
+  font-family: 'ThmanyahSans', sans-serif;
+}
+
+
 @keyframes hero-marquee-scroll {
   from {
     transform: translate3d(0, 0, 0);
   }
+
   to {
     transform: translate3d(-50%, 0, 0);
   }

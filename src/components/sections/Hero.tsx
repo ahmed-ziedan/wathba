@@ -45,7 +45,7 @@ function ProofStrip({ t }: { t: (key: (typeof proofKeys)[number]) => string }) {
               ✦
             </span>
           ) : null}
-          <span className="text-[#A09D96] text-sm md:text-base whitespace-nowrap font-sans">
+          <span className="num text-[#A09D96] text-sm md:text-base whitespace-nowrap font-sans">
             {t(key)}
           </span>
         </Fragment>

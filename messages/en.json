@@ -35,35 +35,47 @@
     "headline_2": "Fixed price. No surprises.",
     "sub": "Every package has a defined scope from day one — you know exactly what you get.",
     "outside_egypt": "Outside Egypt?",
-    "hosting_note": "First year hosting included",
-    "cta": "Start Now",
+    "outside_egypt_prices": "Starter $299 · Business $600 · Pro $1,200",
+    "cta_for_package": "Start with {package}",
+    "included_all_label": "Included in every package",
+    "included_all": [
+      { "icon": "globe", "text": "Domain + hosting (1 year)" },
+      { "icon": "shieldCheck", "text": "SSL certificate" },
+      { "icon": "mapPin", "text": "Google Maps integrated" },
+      { "icon": "smartphone", "text": "Responsive design" },
+      { "icon": "trendingUp", "text": "Basic SEO optimization" }
+    ],
     "badge": "Most Popular",
     "starter": {
       "name": "Starter",
-      "price": "199",
+      "price": "99",
       "price_out": "299",
       "delivery": "2–4 days",
-      "best_for": "Cafes, Restaurants, Salons",
+      "best_for": "For anyone who needs a fast digital presence",
       "features": [
-        "Single-scroll landing page",
-        "Mobile responsive",
-        "WhatsApp CTA button",
-        "Google Maps",
-        "Contact form"
+        "One professional page, fully built",
+        "WhatsApp button with a pre-filled message",
+        "Customers find you on Google Maps",
+        "Contact form delivered to your inbox",
+        "Portfolio gallery",
+        "Perfect on mobile and desktop"
       ]
     },
     "business": {
       "name": "Business",
-      "price": "449",
+      "price": "299",
       "price_out": "600",
       "delivery": "5–7 days",
-      "best_for": "Clinics, Offices, Consultancies",
+      "best_for": "Everything in Starter + bookings & analytics",
       "features": [
-        "3–5 page website",
-        "Basic SEO",
-        "Google Analytics",
-        "Contact form → Email",
-        "2 revision rounds"
+        "Everything in Starter",
+        "Up to 5 pages, fully structured",
+        "Bilingual website (2 languages)",
+        "Built-in booking system",
+        "Monthly analytics reports (GA4)",
+        "Google reviews displayed automatically",
+
+        "Advanced multi-field contact form"
       ]
     },
     "pro": {
@@ -71,13 +83,14 @@
       "price": "899",
       "price_out": "1200",
       "delivery": "12–15 days",
-      "best_for": "Shops, Stores, Online Sellers",
+      "best_for": "A complete online store",
       "features": [
         "Full e-commerce store",
-        "Product catalog + cart",
-        "Stripe checkout",
-        "Admin dashboard",
-        "3 revision rounds"
+        "Catalog + cart + checkout",
+        "Order management dashboard",
+        "Live chat with customers",
+        "Full admin dashboard",
+        "AI-powered chatbot"
       ]
     }
   },
@@ -107,55 +120,82 @@
       }
     ]
   },
+  "portfolio": {
+    "label": "Our Work",
+    "headline": "Sites we built for real clients.",
+    "view": "View Site ↗",
+    "prev": "Previous project",
+    "next": "Next project",
+    "projects": [
+      {
+        "title": "HMRC Area Australia",
+        "industry": "Medical Clinic",
+        "src": "/work/project1.svg",
+        "url": "https://hmrcareaustralia.com.au/"
+      },
+      {
+        "title": "Cairo Kitchen",
+        "industry": "Restaurant",
+        "src": "/work/project2.svg",
+        "url": "#"
+      },
+      {
+        "title": "Al Mahmoud",
+        "industry": "agricultural company",
+        "src": "/work/project3.webp",
+        "url": "https://almahmoud.vercel.app/"
+      },
+      {
+        "title": "Nile Boutique",
+        "industry": "Retail",
+        "src": "/work/project4.svg",
+        "url": "#"
+      }
+    ]
+  },
   "why": {
     "headline": "Why WATHBA?",
     "features": [
       {
-        "icon": "⚡",
+        "icon": "zap",
         "title": "Fixed price from day one",
         "desc": "No hidden fees, no 'let's talk about price'"
       },
       {
-        "icon": "📅",
+        "icon": "calendarClock",
         "title": "Clear delivery timeline",
         "desc": "You know when your site goes live before you pay"
       },
       {
-        "icon": "🔒",
-        "title": "50% deposit only",
-        "desc": "Rest is paid after you see and approve"
+        "icon": "messageCircle",
+        "title": "Direct WhatsApp support",
+        "desc": "Reach us anytime — we respond fast"
       },
       {
-        "icon": "🏠",
+        "icon": "home",
         "title": "First year hosting free",
         "desc": "No extra costs to worry about"
       },
       {
-        "icon": "📱",
-        "title": "Mobile-first always",
-        "desc": "Every site looks perfect on any device"
+        "icon": "userCheck",
+        "title": "Single point of contact",
+        "desc": "A full team behind the scenes — you don't need to think about any of it"
       },
       {
-        "icon": "🎯",
+        "icon": "target",
         "title": "Clear scope",
         "desc": "You know exactly what you get — no more, no less"
       }
     ]
   },
   "contact": {
-    "headline": "Ready to start?",
-    "sub": "Message us and we'll get back to you in under 24 hours.",
-    "name": "Your Name",
-    "business": "Business Name",
-    "whatsapp": "WhatsApp Number",
-    "package": "Interested Package",
-    "cta": "Send Request",
-    "or": "Or reach us directly",
-    "whatsapp_cta": "Message us on WhatsApp"
+    "headline": "Ready to build your digital presence?",
+    "subheadline": "Reach out now — you'll have a clear plan in under 24 hours.",
+    "whatsapp_cta": "Start your project ←"
   },
   "footer": {
     "tagline": "Be found. Be chosen.",
-    "copyright": "© 2026 WATHBA.",
+    "copyright": "©  WATHBA",
     "rights": "All rights reserved."
   }
 }
