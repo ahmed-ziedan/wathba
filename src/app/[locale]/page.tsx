@@ -1,8 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
-import Navbar from "@/components/sections/Navbar";
+import Navbar from "@/components/shared/Navbar";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
-import Footer from "@/components/sections/Footer";
+import Footer from "@/components/shared/Footer";
 import Packages from "@/components/sections/Packages";
 import WhyWathba from "@/components/sections/WhyWathba";
 import Portfolio from "@/components/sections/Portfolio";

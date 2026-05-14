@@ -58,6 +58,7 @@ export default function Contact() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${t("whatsapp_cta")} (opens in new tab)`}
             className="inline-flex min-h-[3.25rem] items-center justify-center rounded-full bg-[#C9A84C] px-8 py-3.5 text-center text-sm font-bold text-black transition hover:bg-[#E2C06A] sm:min-w-[14rem] sm:text-base"
           >
             {t("whatsapp_cta")}

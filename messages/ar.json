@@ -3,7 +3,7 @@
     "wathba": "وثبــة",
     "packages": "الباكدجز",
     "why": "ليه وثبة",
-    "contact": "تواصل",
+    "contact": "تواصل معنا",
     "cta": "ابدأ مشروعك"
   },
   "hero": {
@@ -23,7 +23,7 @@
   "problem": {
     "headline_1": "ليه معظم الـ SMEs",
     "headline_2": "بتخسر عملاء أونلاين؟",
-    "lead": "عندهم بيزنس شغال، عندهم سوشيال ميديا، بس لما حد يسرش عنهم على Google — مش بيلاقيهم.",
+    "lead": "عندهم بيزنس شغال، عندهم سوشيال ميديا، بس لما حد يبحث عنهم على Google — مش بيلاقيهم.",
     "pain_1": "موقع قديم بيطرد العملاء",
     "pain_2": "معندهمش موقع خالص",
     "pain_3": "السوشيال بس مش كفاية",
@@ -134,10 +134,10 @@
         "url": "https://hmrcareaustralia.com.au/"
       },
       {
-        "title": "مطبخ القاهرة",
-        "industry": "مطعم",
-        "src": "/work/project2.svg",
-        "url": "#"
+        "title": "دابل زيرو كافيه",
+        "industry": "كافيه",
+        "src": "/work/project2.webp",
+        "url": "https://doublezero.vercel.app/#/home"
       },
       {
         "title": "شركة المحمود",
@@ -146,10 +146,10 @@
         "url": "https://almahmoud.vercel.app/"
       },
       {
-        "title": "بوتيك النيل",
-        "industry": "تجزئة",
-        "src": "/work/project4.svg",
-        "url": "#"
+        "title": "اسلام عزازي",
+        "industry": "معرض أعمال",
+        "src": "/work/project4.webp",
+        "url": "https://islamalazazy.com/"
       }
     ]
   },
@@ -187,6 +187,25 @@
         "desc": "عارف هتاخد إيه بالظبط، مفيش نقصان"
       }
     ]
+  },
+  "start": {
+    "meta_title": "الخطوة الأولى — وثبة",
+    "meta_description": "خلينا نتعرف على بيزنسك. هنتواصل معاك في أقل من 24 ساعة.",
+    "label": "الخطوة الأولى",
+    "headline": "خلينا نتعرف على بيزنسك",
+    "sub": "ملي النموذج ده وهنتواصل معاك في أقل من 24 ساعة",
+    "field_business_name": "اسم البيزنس",
+    "field_industry": "المجال",
+    "field_description": "بيزنسك بيعمل إيه؟",
+    "field_whatsapp": "رقم الواتساب",
+    "field_email": "البريد الإلكتروني",
+    "field_package": "الباقة اللي تهتم بيها",
+    "package_placeholder": "اختار باقة",
+    "note": "بعد ما تبعت النموذج، فريق المبيعات هيتواصل معاك على واتساب أو الإيميل اللي حطيته.",
+    "submit": "ابعت الطلب",
+    "submitting": "جاري الإرسال…",
+    "mail_subject": "وثبة — طلب مشروع ({package})",
+    "success_message": "شكراً! هنتواصل معاك قريباً على واتساب أو الإيميل."
   },
   "contact": {
     "headline": "جاهز تبني حضورك الرقمي؟",

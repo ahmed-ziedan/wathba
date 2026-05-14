@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { SectionLabel } from "@/components/shared/SectionLabel";
 import { MovingBorder } from "@/components/ui/moving-border";
 import { cn } from "@/lib/utils";
@@ -222,8 +223,8 @@ function PackageCard({ pkg, featured }: { pkg: PkgKey; featured: boolean }) {
         ))}
       </ul>
 
-      <a
-        href="#contact"
+      <Link
+        href={`/start?package=${pkg}`}
         className={cn(
           "mt-10  inline-flex w-full items-center justify-center rounded-full py-3.5 text-sm font-bold transition-opacity duration-300 ease-out md:py-4",
           featured
@@ -233,7 +234,7 @@ function PackageCard({ pkg, featured }: { pkg: PkgKey; featured: boolean }) {
         style={featured ? { backgroundColor: "var(--gold)" } : undefined}
       >
         {t("cta_for_package", { package: t(`${pkg}.name`) })}
-      </a>
+      </Link>
     </div>
   );
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
@@ -7,13 +8,17 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 
 const navLinks = [
-  { key: "packages", href: "#packages" },
-  { key: "why", href: "#why" },
-  { key: "contact", href: "#contact" },
+  { key: "packages", sectionId: "packages" },
+  { key: "why", sectionId: "why" },
+  { key: "contact", sectionId: "contact" },
 ] as const;
 
 const ctaClassName =
   "bg-[#C9A84C] text-black font-bold text-sm px-6 py-2.5 rounded-full hover:bg-[#E8C97A] transition";
+
+function isHomePath(pathname: string | null) {
+  return pathname === "/" || pathname === "";
+}
 
 export default function Navbar() {
   const t = useTranslations("nav");
@@ -22,6 +27,8 @@ export default function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const onHome = isHomePath(pathname);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
@@ -38,34 +45,41 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* ── Logo ── */}
-        {/* <img src="/logo.png" alt="WATHBA" className="h-8 w-auto" /> */}
-        <div className="flex items-center gap-2">
-          {/* اللوجو */}
-          <img src="/logo.png" alt="WATHBA" className="h-8 w-auto" />
+        <Link
+          href="/"
+          onClick={() => setMobileOpen(false)}
+          className="flex shrink-0 items-center gap-2 transition-opacity hover:opacity-90"
+        >
+          <Image src="/logo.png" alt="WATHBA logo" width={32} height={32} className="h-8 w-auto" />
 
-          {/* اسم الشركة */}
-          <span className="text-xl font-bold text-white tracking-wide">
+          <span className="text-xl font-bold tracking-wide text-white">
             {t("wathba")}
           </span>
-        </div>
-        {/* ------------------------- */}
-        {/* ── Center nav links (desktop only) ── */}
+        </Link>
+
         <div className="hidden md:flex items-center border border-white/10 bg-white/[0.03] rounded-full px-6 py-2 gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.key}
-              href={link.href}
-              className="text-sm font-sans text-white/70 hover:text-white transition"
-            >
-              {t(link.key)}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            onHome ? (
+              <a
+                key={link.key}
+                href={`#${link.sectionId}`}
+                className="text-sm font-sans text-white/70 hover:text-white transition"
+              >
+                {t(link.key)}
+              </a>
+            ) : (
+              <Link
+                key={link.key}
+                href={`/#${link.sectionId}`}
+                className="text-sm font-sans text-white/70 hover:text-white transition"
+              >
+                {t(link.key)}
+              </Link>
+            ),
+          )}
         </div>
 
-        {/* ── Right side: Language toggle + CTA + mobile hamburger ── */}
         <div className="flex items-center gap-3">
-          {/* Language toggle */}
           <div className="flex items-center gap-1 text-sm font-sans">
             <Link
               href={pathname}
@@ -92,15 +106,22 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* CTA — desktop only; mobile uses drawer */}
-          <a
-            href="#contact"
-            className={`hidden md:inline-flex items-center justify-center ${ctaClassName}`}
-          >
-            {t("cta")}
-          </a>
+          {onHome ? (
+            <a
+              href="#contact"
+              className={`hidden md:inline-flex items-center justify-center ${ctaClassName}`}
+            >
+              {t("cta")}
+            </a>
+          ) : (
+            <Link
+              href="/#contact"
+              className={`hidden md:inline-flex items-center justify-center ${ctaClassName}`}
+            >
+              {t("cta")}
+            </Link>
+          )}
 
-          {/* Hamburger — mobile only */}
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
             className="md:hidden text-white/80 hover:text-white transition"
@@ -111,7 +132,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ── Mobile dropdown ── */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -122,23 +142,44 @@ export default function Navbar() {
             className="md:hidden overflow-hidden bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/[0.06]"
           >
             <div className="flex flex-col items-center gap-4 py-6">
-              {navLinks.map((link) => (
+              {navLinks.map((link) =>
+                onHome ? (
+                  <a
+                    key={link.key}
+                    href={`#${link.sectionId}`}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-sans text-white/70 hover:text-white transition"
+                  >
+                    {t(link.key)}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.key}
+                    href={`/#${link.sectionId}`}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-sans text-white/70 hover:text-white transition"
+                  >
+                    {t(link.key)}
+                  </Link>
+                ),
+              )}
+              {onHome ? (
                 <a
-                  key={link.key}
-                  href={link.href}
+                  href="#contact"
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm font-sans text-white/70 hover:text-white transition"
+                  className={`inline-flex items-center justify-center ${ctaClassName}`}
                 >
-                  {t(link.key)}
+                  {t("cta")}
                 </a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className={`inline-flex items-center justify-center ${ctaClassName}`}
-              >
-                {t("cta")}
-              </a>
+              ) : (
+                <Link
+                  href="/#contact"
+                  onClick={() => setMobileOpen(false)}
+                  className={`inline-flex items-center justify-center ${ctaClassName}`}
+                >
+                  {t("cta")}
+                </Link>
+              )}
             </div>
           </motion.div>
         )}

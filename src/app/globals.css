@@ -1,5 +1,4 @@
-/* ── English Fonts (Google) ── */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap");
+/* ── English Fonts: loaded via next/font/google in layout.tsx (self-hosted, non-blocking) ── */
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -48,13 +47,12 @@
   /* Shadcn defaults */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: var(--font-jetbrains-mono, "JetBrains Mono"), monospace;
   --font-heading: var(--font-sans);
 
   /* Dynamic font families — set via CSS vars on <html> per locale */
-  --font-display: var(--font-display, "Syne"), "Cairo", sans-serif;
-  --font-sans: var(--font-body, "DM Sans"), "Cairo", sans-serif;
-  --font-bebas: "Bebas Neue", sans-serif;
+  --font-display: var(--font-display, "Syne"), sans-serif;
+  --font-sans: var(--font-body, "DM Sans"), sans-serif;
 
   /* Custom brand colors */
   --color-gold: #c9a84c;
@@ -221,9 +219,8 @@
 
 /* Hero — infinite proof ticker: two identical segments, zero gap, translate -50% = one segment */
 .num {
-  font-family: 'ThmanyahSans', sans-serif;
+  font-family: "ThmanyahSans", sans-serif;
 }
-
 
 @keyframes hero-marquee-scroll {
   from {
@@ -243,4 +240,94 @@
   width: max-content;
   will-change: transform;
   animation: hero-marquee-scroll 32s linear infinite;
+}
+
+/* Hero — aurora blobs (CSS paths; component uses Framer for mount fade) */
+.aurora-hero-blob {
+  will-change: transform;
+}
+
+@keyframes aurora-hero-drift-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  28% {
+    transform: translate3d(14vw, -6vh, 0) scale(1.04);
+  }
+
+  52% {
+    transform: translate3d(-6vw, 12vh, 0) scale(0.97);
+  }
+
+  78% {
+    transform: translate3d(10vw, 8vh, 0) scale(1.02);
+  }
+}
+
+@keyframes aurora-hero-drift-2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  22% {
+    transform: translate3d(-18vw, -10vh, 0) scale(1.06);
+  }
+
+  48% {
+    transform: translate3d(8vw, -18vh, 0) scale(0.95);
+  }
+
+  74% {
+    transform: translate3d(-4vw, 6vh, 0) scale(1.03);
+  }
+}
+
+@keyframes aurora-hero-drift-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate3d(12vw, -14vh, 0) scale(1.05);
+  }
+
+  55% {
+    transform: translate3d(-10vw, 10vh, 0) scale(0.96);
+  }
+
+  82% {
+    transform: translate3d(6vw, 4vh, 0) scale(1.02);
+  }
+}
+
+.aurora-hero-blob--1 {
+  animation: aurora-hero-drift-1 25s ease-in-out infinite;
+}
+
+.aurora-hero-blob--2 {
+  animation: aurora-hero-drift-2 35s ease-in-out infinite;
+}
+
+.aurora-hero-blob--3 {
+  animation: aurora-hero-drift-3 45s ease-in-out infinite;
+}
+
+/* Hero — decorative starfield (twinkle duration/delay set per star inline) */
+@keyframes starfield-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.starfield-star {
+  /* will-change removed: 120 elements each promoting to own compositing layer is excessive */
 }

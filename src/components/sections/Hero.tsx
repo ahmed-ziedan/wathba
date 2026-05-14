@@ -4,6 +4,8 @@ import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { GrainOverlay } from "@/components/shared/GrainOverlay";
+import { AuroraBackground } from "@/components/ui/AuroraBackground";
+import { Starfield } from "@/components/ui/Starfield";
 
 const proofKeys = [
   "proof_1",
@@ -62,6 +64,8 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#08080D] text-[#F0EDE6]">
+      <Starfield />
+      <AuroraBackground />
       <GrainOverlay className="absolute inset-0 z-[1] h-full min-h-full w-full" />
 
       {/* Soft gold glow (Spotlight-style, no extra dependency) */}

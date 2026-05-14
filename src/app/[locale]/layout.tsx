@@ -1,22 +1,68 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { Cairo } from "next/font/google";
+import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const cairo = Cairo({
-  subsets: ["arabic", "latin"],
-  variable: "--font-cairo",
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
   display: "swap",
+  variable: "--font-syne",
 });
 
-export const metadata: Metadata = {
-  title: "WATHBA - Professional Web Solutions",
-  description:
-    "WATHBA — Professional websites in days. Fixed price, no surprises. وثبة — موقعك الاحترافي في أيام.",
-};
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+});
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+  return {
+    title: isAr
+      ? "WATHBA — موقع احترافي لبيزنسك في أيام"
+      : "WATHBA — Professional Websites for Your Business in Days",
+    description: isAr
+      ? "نبنيلك موقع احترافي بسعر ثابت وبدون مفاجآت. استضافة السنة الأولى مجانية."
+      : "We build professional websites with fixed pricing, no surprises. First year hosting included.",
+    openGraph: {
+      title: isAr
+        ? "WATHBA — موقع احترافي لبيزنسك في أيام"
+        : "WATHBA — Professional Websites for Your Business in Days",
+      description: isAr
+        ? "نبنيلك موقع احترافي بسعر ثابت وبدون مفاجآت. استضافة السنة الأولى مجانية."
+        : "We build professional websites with fixed pricing, no surprises. First year hosting included.",
+      url: `https://wathba.tech/${locale}`,
+      locale: isAr ? "ar_EG" : "en_US",
+      siteName: "WATHBA",
+      type: "website",
+    },
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://wathba.tech/${locale}`,
+      languages: {
+        en: "https://wathba.tech/en",
+        ar: "https://wathba.tech/ar",
+      },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -32,7 +78,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Validate locale
-  if (!routing.locales.includes(locale as "en" | "ar")) {
+  if (!routing.locales.includes(locale as "ar" | "en")) {
     notFound();
   }
 
@@ -45,20 +91,14 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isAr ? "rtl" : "ltr"}
-      className={cairo.variable}
+      className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
       style={
         {
-          "--font-display": isAr ? "ThmanyahDisplay" : "Syne",
-          "--font-body": isAr ? "ThmanyahSans" : "DM Sans",
+          "--font-display": isAr ? "ThmanyahDisplay" : "var(--font-syne)",
+          "--font-body": isAr ? "ThmanyahSans" : "var(--font-dm-sans)",
         } as React.CSSProperties
       }
     >
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="bg-[#0a0a0a] text-white font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}

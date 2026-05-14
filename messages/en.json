@@ -8,8 +8,8 @@
   },
   "hero": {
     "badge": "✦ Digital presence for your business ",
-    "headline_1": "Your website is your",
-    "headline_2": "first impression.",
+    "headline_1": "First impressions start",
+    "headline_2": "with your website.",
     "sub": "We build professional websites in days — fixed price, no surprises.",
     "cta_primary": "See Packages",
     "cta_secondary": "Contact Us",
@@ -134,10 +134,10 @@
         "url": "https://hmrcareaustralia.com.au/"
       },
       {
-        "title": "Cairo Kitchen",
-        "industry": "Restaurant",
-        "src": "/work/project2.svg",
-        "url": "#"
+        "title": "Double zero",
+        "industry": "Cafe",
+        "src": "/work/project2.webp",
+        "url": "https://doublezero.vercel.app/#/home"
       },
       {
         "title": "Al Mahmoud",
@@ -146,10 +146,10 @@
         "url": "https://almahmoud.vercel.app/"
       },
       {
-        "title": "Nile Boutique",
-        "industry": "Retail",
-        "src": "/work/project4.svg",
-        "url": "#"
+        "title": "Islam azazy",
+        "industry": "Portfolio",
+        "src": "/work/project4.webp",
+        "url": "https://islamalazazy.com/"
       }
     ]
   },
@@ -187,6 +187,25 @@
         "desc": "You know exactly what you get — no more, no less"
       }
     ]
+  },
+  "start": {
+    "meta_title": "First step — WATHBA",
+    "meta_description": "Tell us about your business. We'll reach out within 24 hours.",
+    "label": "First Step",
+    "headline": "Tell us about your business",
+    "sub": "Fill this in and we'll reach out within 24 hours",
+    "field_business_name": "Business Name",
+    "field_industry": "Industry",
+    "field_description": "What does your business do?",
+    "field_whatsapp": "WhatsApp Number",
+    "field_email": "Email",
+    "field_package": "Interested Package",
+    "package_placeholder": "Select a package",
+    "note": "After submitting, our team will reach out via WhatsApp or email within 24 hours.",
+    "submit": "Send Request",
+    "submitting": "Sending…",
+    "mail_subject": "WATHBA — Project request ({package})",
+    "success_message": "Thanks! We'll reach out to you soon via WhatsApp or email."
   },
   "contact": {
     "headline": "Ready to build your digital presence?",
